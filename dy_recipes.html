@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="recipe.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .recipe-header {
+            background-color: brown;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .recipe-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .recipe-image-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .recipe-image-box img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .recipe-meta {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .recipe-description,
+        .recipe-ingredients,
+        .recipe-instructions {
+            margin-bottom: 30px;
+        }
+
+        .recipe-description h2,
+        .recipe-ingredients h2,
+        .recipe-instructions h2 {
+            margin-bottom: 10px;
+            color: brown;
+            font-size: 24px;
+        }
+
+        #ingredients-list li,
+        #instructions-list li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .recipe-footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+         a {
+      color: teal;
+      text-decoration: none;
+    }
+        @media (max-width: 600px) {
+            .recipe-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .recipe-description h2,
+            .recipe-ingredients h2,
+            .recipe-instructions h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="recipe-header">
+        <h1 id="recipe-title">Loading...</h1>
+    </header>
+
+    <main class="recipe-container">
+        <div class="recipe-image-box">
+            <img id="recipe-image" src="" alt="Recipe Image" />
+        </div>
+
+        <section class="recipe-meta">
+            <p><strong>Prep Time:</strong> <span id="prep-time">--</span></p>
+            <p><strong>Cook Time:</strong> <span id="cook-time">--</span></p>
+            <p><strong>Servings:</strong> <span id="servings">--</span></p>
+        </section>
+
+        <section class="recipe-description">
+            <h2>Description</h2>
+            <p id="recipe-description">Loading description...</p>
+        </section>
+
+        <section class="recipe-ingredients">
+            <h2>Ingredients</h2>
+            <ul id="ingredients-list"></ul>
+        </section>
+
+        <section class="recipe-instructions">
+            <h2>Instructions</h2>
+            <ol id="instructions-list"></ol>
+        </section>
+    </main>
+    <p><a href="index.html">← Back to Home</a></p>
+
+    <footer class="recipe-footer">
+        <p>© 2025 ClicktoCook</p>
+    </footer>
+
+
+    <!-- script -->
+    <script>
+        // Load recipe ID from URL (e.g., recipe.html?id=strawberry-muffins)
+        const urlParams = new URLSearchParams(window.location.search);
+        const recipeId = urlParams.get("id");
+
+        // Load JSON data
+        fetch("recipes.json")
+            .then((response) => response.json())
+            .then((recipes) => {
+                console.log("Loaded recipes:", recipes);
+
+                const recipe = recipes.find((r) => r.id === recipeId);
+                if (!recipe) {
+                    document.body.innerHTML = "<h2>Recipe not found!</h2>";
+                    return;
+                }
+
+                // Fill content dynamically
+                document.getElementById("recipe-title").textContent = recipe.title;
+                document.getElementById("recipe-image").src = recipe.image;
+                document.getElementById("recipe-image").alt = recipe.title;
+                document.getElementById("prep-time").textContent = recipe.prepTime;
+                document.getElementById("cook-time").textContent = recipe.cookTime;
+                document.getElementById("servings").textContent = recipe.servings;
+                document.getElementById("recipe-description").textContent = recipe.description;
+
+                const ingList = document.getElementById("ingredients-list");
+                recipe.ingredients.forEach((item) => {
+                    const li = document.createElement("li");
+                    li.textContent = item;
+                    ingList.appendChild(li);
+                });
+
+                const instList = document.getElementById("instructions-list");
+                recipe.instructions.forEach((step) => {
+                    const li = document.createElement("li");
+                    li.textContent = step;
+                    instList.appendChild(li);
+                });
+            })
+            .catch((error) => {
+                console.error("Error loading recipe:", error);
+                document.body.innerHTML = "<h2>Error loading recipe.</h2>";
+            });
+
+    </script>
+</body>
+
+</html>

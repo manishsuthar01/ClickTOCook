@@ -1,0 +1,277 @@
+[
+  {
+    "id": "strawberry-muffins",
+    "title": "Strawberry Muffins",
+    "image": "images/b1 (1).png",
+    "prepTime": "10 mins",
+    "cookTime": "25 mins",
+    "servings": "6",
+    "description": "Delicious and fluffy muffins loaded with fresh strawberries.",
+    "ingredients": [
+      "1 cup all-purpose flour",
+      "1/2 cup sugar",
+      "1 tsp baking powder",
+      "1/2 cup milk",
+      "1/4 cup vegetable oil",
+      "1 egg",
+      "1/2 cup chopped strawberries"
+    ],
+    "instructions": [
+      "Preheat the oven to 180°C (350°F).",
+      "Mix dry ingredients in a bowl.",
+      "In another bowl, whisk wet ingredients.",
+      "Combine both, then fold in strawberries.",
+      "Pour into muffin tin and bake for 25 minutes."
+    ],
+    "category": "breakfast"
+  },
+  {
+    "id": "vegetable-sandwich",
+    "title": "Vegetable Sandwich",
+    "image": "images/b1 (2).png",
+    "prepTime": "10 mins",
+    "cookTime": "5 mins",
+    "servings": "2",
+    "description": "Quick and easy sandwich with fresh vegetables and flavorful chutney.",
+    "ingredients": [
+      "4 slices of bread",
+      "1 cucumber (sliced)",
+      "1 tomato (sliced)",
+      "1 boiled potato (sliced)",
+      "Green chutney",
+      "Butter"
+    ],
+    "instructions": [
+      "Butter the bread slices.",
+      "Spread green chutney on one side.",
+      "Layer sliced veggies, sprinkle salt and pepper.",
+      "Grill or serve as-is."
+    ],
+    "category": "breakfast"
+  },
+  {
+    "id": "poha",
+    "title": "Poha",
+    "image": "images/b1 (3).png",
+    "prepTime": "10 mins",
+    "cookTime": "10 mins",
+    "servings": "2",
+    "description": "Flattened rice dish lightly fried with onions, mustard seeds, and spices.",
+    "ingredients": [
+      "1 cup poha",
+      "1 onion (chopped)",
+      "1 green chili",
+      "1/2 tsp mustard seeds",
+      "Curry leaves",
+      "Salt and turmeric"
+    ],
+    "instructions": [
+      "Rinse poha and keep aside.",
+      "Heat oil, add mustard seeds, onion, chili, and curry leaves.",
+      "Add poha, salt, turmeric. Mix well and cook for 5 mins."
+    ],
+    "category": "breakfast"
+  },
+  {
+    "id": "paneer-butter-masala",
+    "title": "Paneer Butter Masala",
+    "image": "images/b2 (1).png",
+    "prepTime": "15 mins",
+    "cookTime": "30 mins",
+    "servings": "4",
+    "description": "Creamy North Indian curry made with paneer cubes simmered in rich tomato gravy.",
+    "ingredients": [
+      "200g paneer cubes",
+      "2 tomatoes (pureed)",
+      "1 onion (finely chopped)",
+      "2 tbsp butter",
+      "1/4 cup cream",
+      "1 tsp garam masala",
+      "Salt and spices to taste"
+    ],
+    "instructions": [
+      "Heat butter, sauté onion and tomato puree.",
+      "Add spices and cook till thick.",
+      "Add cream and paneer, simmer for 10 minutes.",
+      "Serve hot with naan or rice."
+    ],
+    "category": "lunch"
+  },
+  {
+    "id": "rajma-chawal",
+    "title": "Rajma Chawal",
+    "image": "images/b2 (2).png",
+    "prepTime": "20 mins",
+    "cookTime": "40 mins",
+    "servings": "4",
+    "description": "Red kidney beans cooked in thick gravy, served with steamed rice.",
+    "ingredients": [
+      "1 cup rajma",
+      "2 tomatoes",
+      "1 onion",
+      "Spices (turmeric, garam masala, chili powder)",
+      "Salt",
+      "Rice"
+    ],
+    "instructions": [
+      "Soak rajma overnight, then pressure cook.",
+      "Make gravy with onion, tomato, spices.",
+      "Add rajma and simmer.",
+      "Serve with hot rice."
+    ],
+    "category": "lunch"
+  },
+  {
+    "id": "veg-pulao",
+    "title": "Veg Pulao",
+    "image": "images/b2 (3).png",
+    "prepTime": "15 mins",
+    "cookTime": "25 mins",
+    "servings": "3",
+    "description": "Aromatic rice cooked with mixed vegetables and spices.",
+    "ingredients": [
+      "1 cup basmati rice",
+      "Mixed vegetables (carrot, peas, beans)",
+      "Whole spices (cloves, cardamom)",
+      "Onion",
+      "Ghee or oil"
+    ],
+    "instructions": [
+      "Sauté onions and spices.",
+      "Add vegetables and rice.",
+      "Add water and cook until rice is done."
+    ],
+    "category": "lunch"
+  },
+  {
+    "id": "dal-tadka",
+    "title": "Dal Tadka",
+    "image": "images/b3 (1).png",
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "servings": "3",
+    "description": "Yellow lentils tempered with garlic and spices.",
+    "ingredients": [
+      "1 cup toor dal",
+      "Garlic, cumin seeds, mustard seeds",
+      "Onion, tomato",
+      "Red chili, turmeric",
+      "Ghee or oil"
+    ],
+    "instructions": [
+      "Cook dal until soft.",
+      "Prepare tempering with spices and pour over dal.",
+      "Simmer for 5 minutes."
+    ],
+    "category": "dinner"
+  },
+  {
+    "id": "matar-paneer",
+    "title": "Matar Paneer",
+    "image": "images/b3 (2).png",
+    "prepTime": "15 mins",
+    "cookTime": "25 mins",
+    "servings": "4",
+    "description": "Peas and paneer cubes cooked in tomato-based curry.",
+    "ingredients": [
+      "200g paneer",
+      "1 cup peas",
+      "2 tomatoes",
+      "1 onion",
+      "Spices",
+      "Oil"
+    ],
+    "instructions": [
+      "Fry paneer lightly.",
+      "Make curry with onion, tomato, and spices.",
+      "Add peas and paneer, simmer till done."
+    ],
+    "category": "dinner"
+  },
+  {
+    "id": "aloo-gobi",
+    "title": "Aloo Gobi",
+    "image": "images/b3 (3).png",
+    "prepTime": "15 mins",
+    "cookTime": "20 mins",
+    "servings": "3",
+    "description": "Dry curry made with potatoes and cauliflower, flavored with Indian spices.",
+    "ingredients": [
+      "2 potatoes",
+      "1 cup cauliflower florets",
+      "Turmeric, chili, cumin",
+      "Oil, salt"
+    ],
+    "instructions": [
+      "Heat oil and add cumin.",
+      "Add vegetables and spices.",
+      "Cook covered until tender."
+    ],
+    "category": "dinner"
+  },
+  {
+    "id": "fruit-salad",
+    "title": "Fruit Salad",
+    "image": "images/b4 (1).png",
+    "prepTime": "10 mins",
+    "cookTime": "0 mins",
+    "servings": "2",
+    "description": "Healthy salad with a mix of fresh seasonal fruits.",
+    "ingredients": [
+      "Apple, banana, papaya, grapes",
+      "Honey",
+      "Lemon juice",
+      "Chaat masala (optional)"
+    ],
+    "instructions": [
+      "Chop all fruits into a bowl.",
+      "Add honey and lemon juice.",
+      "Mix and serve chilled."
+    ],
+    "category": "breakfast"
+  },
+  {
+    "id": "chole-bhature",
+    "title": "Chole Bhature",
+    "image": "images/b4 (2).png",
+    "prepTime": "30 mins",
+    "cookTime": "30 mins",
+    "servings": "4",
+    "description": "Spicy chickpeas served with deep-fried bread (bhature).",
+    "ingredients": [
+      "1 cup chickpeas",
+      "2 tomatoes",
+      "1 onion",
+      "Flour for bhature",
+      "Spices"
+    ],
+    "instructions": [
+      "Cook chole with onion, tomato, spices.",
+      "Make dough and fry bhature.",
+      "Serve hot together."
+    ],
+    "category": "lunch"
+  },
+  {
+    "id": "curd-rice",
+    "title": "Curd Rice",
+    "image": "images/b4 (3).png",
+    "prepTime": "10 mins",
+    "cookTime": "10 mins",
+    "servings": "2",
+    "description": "South Indian comfort food made with rice and curd, tempered with spices.",
+    "ingredients": [
+      "1 cup cooked rice",
+      "1 cup curd",
+      "Mustard seeds",
+      "Curry leaves",
+      "Ginger, chili"
+    ],
+    "instructions": [
+      "Mix rice with curd.",
+      "Prepare tempering with spices.",
+      "Mix and serve chilled or warm."
+    ],
+    "category": "dinner"
+  }
+]
