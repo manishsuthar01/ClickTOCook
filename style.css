@@ -36,6 +36,24 @@ body {
   display: inline-block;
   animation: rightshift 0.3s ease-in-out forwards;
 }
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  animation: appear 0.5s ease-in-out forwards;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .navbar ul {
   display: flex;
   list-style: none;
@@ -134,14 +152,17 @@ body {
   }
 }
 
+
 /* Hero */
 .hero-content {
-  background-image: url("images/Screenshot 2025-06-16 225639.png");
+  background-image: url("images/COVER.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   height: 67vh;
+  object-fit: cover;
   position: relative;
+  border: 2px solid #222;
 }
 
 .hero-part-content {
@@ -156,6 +177,18 @@ body {
   width: 100%;
   color: #222;
   padding: 10px;
+  animation: leftshift 0.5s ease-in-out forwards;
+}
+@keyframes leftshift {
+  0% {
+    transform: translateX(-40px);
+    opacity: 0.01;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  
 }
 .hero-part-content h1 {
   font-size: clamp(14px, 3vw, 30px);
@@ -199,7 +232,6 @@ body {
   width: 19%;
   min-width: 100px;
   padding: 10px;
-  cursor: pointer;
   border: 1px solid #fdfdfd;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(54, 10, 10, 0.1);
@@ -262,9 +294,15 @@ body {
   color: #ccc;
 }
 
-
 /* Responsive Media Queries */
 @media (max-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .logo{
+    padding-right: 90px;
+  }
   .logo h2 {
     display: none;
   }
@@ -278,10 +316,7 @@ body {
     font-size: clamp(10px, 3vw, 12px);
     padding: 5px;
   }
-  .header-container {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
+
   .nav-item .dropdown {
     display: none;
     top: 100%;
@@ -321,12 +356,12 @@ body {
 @media (max-width: 600px) {
   .header-container {
     justify-content: flex-start;
-    padding: 30px 20px;
+    padding: 14px 20px;
     position: relative;
   }
-  .logo {
-    font-size: clamp(12px, 2vw, 22px);
-    animation: rightshift 0.3s ease-in-out forwards;
+  .logo img {
+    width: 40px;
+    height: 40px;
   }
   .nav-item .dropdown {
     position: absolute;
@@ -363,8 +398,8 @@ body {
   .nav-item .dropdown {
     top: 100%;
     left: 100%;
-    min-width: 100px;
-    width: 170px;
+    min-width: 150px;
+    width: 190px;
     height: auto;
     padding: 10px;
     font-size: clamp(10px, 2vw, 15px);
@@ -375,24 +410,24 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: 900;
-    color: black;
-    background-color: rgba(157, 113, 113, 0.888);
     position: absolute;
-    top: 60px;
+    top: 79px;
     left: 0;
     width: 40%;
-    min-width: 150px;
     height: 100vh;
-    border: 2px solid #222;
+    background-color: rgb(169, 50, 50);
+    transition: scale 0.3s ease-in-out;
   }
   .navbar.show ul {
     flex-direction: column;
     position: absolute;
     top: 30px;
-    font-size: clamp(12px, 2.5vw, 22px);
   }
   .navbar.show ul li {
     padding: 17px 0;
+    a {
+      font-size: 17px;
+    }
   }
   .navbar.show li a::after {
     content: "";
@@ -420,30 +455,41 @@ body {
 }
 
 @media (max-width: 480px) {
-    .header-container {
-    padding: 25px 20px;
+  .header-container {
+    padding: 18px 20px;
   }
   .navbar {
     display: none;
   }
-   #menu_toggle i {
-    font-size: 19px;
+  #menu_toggle i {
+    font-size: 26px;
     color: white;
     font-weight: 800;
   }
   .hero-content {
     height: 40vh;
+    object-fit: cover;
   }
-
-  .navbar ul li {
-    margin: 5px 0;
+  .navbar.show ul li {
+    padding: 17px 0;
+    a {
+      font-size: 14px;
+    }
   }
-   .navbar.show {
-
+  .navbar.show {
     position: absolute;
-    top: 50px;
+    top: 69px;
     left: 0;
   }
+
+  .hero-part-content {
+    height: auto;
+    padding: 12px;
+  }
+  .hero-content {
+    height: 70vh;
+  }
+
   #breakfast h2,
   #lunch h2,
   #dinner h2 {
@@ -451,13 +497,8 @@ body {
     padding: 20px;
   }
   .breakfast_card {
-    padding: 10px;
+    padding: 0px;
   }
-
-  .card {
-    padding: 5px;
-  }
-
   .more-btn {
     padding: 8px 16px;
   }
